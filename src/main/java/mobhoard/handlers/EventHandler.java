@@ -71,7 +71,7 @@ public class EventHandler
 						{
 							EntityAINearestAttackableTarget nearestTargetAI = (EntityAINearestAttackableTarget)((EntityAITaskEntry)entityLiving.targetTasks.taskEntries.get(j)).action;
 							
-							if(targetClass.get(nearestTargetAI) instanceof EntityPlayer)
+							if(targetClass.get(nearestTargetAI) == EntityPlayer.class)
 							{
 								checkSight.set(nearestTargetAI, !MH_Settings.xrayVision);
 								nearbyOnly.set(nearestTargetAI, MH_Settings.awareness <= 24);
@@ -92,7 +92,6 @@ public class EventHandler
 						        		entityLiving.getEntityData().setDouble("HOARD_BASE_AWARENESS", iattributeinstance.getAttributeValue());
 						        	}
 						        	iattributeinstance.setBaseValue((double)MH_Settings.awareness);
-						        	//System.out.println("Set awareness of " + entityLiving.getCommandSenderName() + " to " + ZH_Settings.awareness);
 						        }
 							}
 						}
