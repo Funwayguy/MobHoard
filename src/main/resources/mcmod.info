@@ -1,0 +1,16 @@
+[
+{
+  "modid": "zombiehoard",
+  "name": "ZombieHoard",
+  "description": "Sends armies of zombies at the player on full moon nights.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Funwayguy","Siyliss"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
