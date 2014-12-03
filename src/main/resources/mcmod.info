@@ -1,8 +1,8 @@
 [
 {
-  "modid": "zombiehoard",
-  "name": "ZombieHoard",
-  "description": "Sends armies of zombies at the player on full moon nights.",
+  "modid": "mobhoard",
+  "name": "MobHoard",
+  "description": "Send hoards of mobs toward players",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

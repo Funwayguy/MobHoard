@@ -75,25 +75,25 @@ public class EventHandler
 							{
 								checkSight.set(nearestTargetAI, !MH_Settings.xrayVision);
 								nearbyOnly.set(nearestTargetAI, MH_Settings.awareness <= 24);
-							}
-							
-					        IAttributeInstance iattributeinstance = entityLiving.getEntityAttribute(SharedMonsterAttributes.followRange);
-					        if(iattributeinstance != null && iattributeinstance.getAttributeValue() < MH_Settings.awareness)
-					        {
-					        	if(!entityLiving.getEntityData().hasKey("HOARD_BASE_AWARENESS"))
-					        	{
-					        		entityLiving.getEntityData().setDouble("HOARD_BASE_AWARENESS", iattributeinstance.getAttributeValue());
-					        	}
-					        	iattributeinstance.setBaseValue((double)MH_Settings.awareness);
-					        	//System.out.println("Set awareness of " + entityLiving.getCommandSenderName() + " to " + ZH_Settings.awareness);
-					        }
-							
-							if(MH_Settings.speedBoost > 0)
-							{
-								entityLiving.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 300, MH_Settings.speedBoost));
-							} else if(MH_Settings.speedBoost < 0)
-							{
-								entityLiving.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 300, -MH_Settings.speedBoost));
+								
+								if(MH_Settings.speedBoost > 0)
+								{
+									entityLiving.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 300, MH_Settings.speedBoost));
+								} else if(MH_Settings.speedBoost < 0)
+								{
+									entityLiving.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 300, -MH_Settings.speedBoost));
+								}
+								
+						        IAttributeInstance iattributeinstance = entityLiving.getEntityAttribute(SharedMonsterAttributes.followRange);
+						        if(iattributeinstance != null && iattributeinstance.getAttributeValue() < MH_Settings.awareness)
+						        {
+						        	if(!entityLiving.getEntityData().hasKey("HOARD_BASE_AWARENESS"))
+						        	{
+						        		entityLiving.getEntityData().setDouble("HOARD_BASE_AWARENESS", iattributeinstance.getAttributeValue());
+						        	}
+						        	iattributeinstance.setBaseValue((double)MH_Settings.awareness);
+						        	//System.out.println("Set awareness of " + entityLiving.getCommandSenderName() + " to " + ZH_Settings.awareness);
+						        }
 							}
 						}
 					}

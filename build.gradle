@@ -17,9 +17,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "ZOMB_HOARD_KEY"
-group= "zombiehoard" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "ZombieHoard"
+version = "MOB_HOARD_KEY"
+group= "mobhoard" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "MobHoard"
 
 minecraft {
     version = "1.7.10-10.13.2.1230"
