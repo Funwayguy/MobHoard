@@ -16,9 +16,9 @@ public class MH_Settings
 	public static boolean xrayVision = true;
 	
 	/**
-	 * Whether the hoard waits for a full moon or not
+	 * How and when the mob should hoard should attack (0 = Full moon nights, 1 = Random Nights, 2 = Every night, 3 = All day every day)
 	 */
-	public static boolean lunarHoard = true;
+	public static int hoardMode = 0;
 	
 	/**
 	 * Ignore 'hoardMobs' and just send every compatible mob
